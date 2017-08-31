@@ -1,0 +1,40 @@
+$def with(mappings)
+<div style="margin-left:20%;margin-right:20%;width:60%;height:54px;padding-left:6%">
+	<div style="width:20%;float:left;text-align:center;">
+		<span>
+			<p><a href="/new_user">注册用户</a></p>
+		</span>
+	</div>	
+	<div style="width:20%;float:left;text-align:center;">
+		<span>
+			<p><a href="/delete_user">删除用户</a></p>
+		</span>
+	</div>	
+	<div style="width:20%;float:left;text-align:center;">
+		<span>
+			<p><a href="/reset_password">更改用户密码</a></p>
+		</span>
+	</div>	
+	<div style="width:20%;float:left;text-align:center;">
+		<span>
+			<p><a href="/change_userrole"><span>更改用户角色</span></a></p>
+		</span>
+	</div>	
+</div>
+<div style="margin-top:30px;margin-left:20%;padding-left:20%;">	
+	<table border="1">
+		<thead>
+			<tr>
+				<th>角色</th>
+				<th>用户</th>
+			</tr>
+		</thead>
+		<tbody>
+			$for mapping in mappings:
+				<tr>
+					<td><a href="/role?sg=$mapping['role']">$mapping['role']</a></td>
+					<td>$mapping['users']</td>
+				</tr>
+		</tbody>
+	</table>
+</div>	

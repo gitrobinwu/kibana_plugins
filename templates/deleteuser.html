@@ -1,0 +1,33 @@
+$def with(user_select,message)
+<div style="margin-left:30px;">
+	<div style="width:20%;">
+		<span style="color:#f51515;text-align:left;font-size:20px;">
+			<h3>删除用户</h3>
+		</span>	
+	</div>
+
+	$# 如果消息非空则刷新刷新消息
+	$if message:
+		<div style="width:80%">
+			<div style="color: #F20C0C;font-size:15px;text-align:left;">
+				<p><span>提示:&nbsp&nbsp</span><span>$message</span></p>
+			</div>
+		</div>	
+
+	$if user_select:	
+		$#删除用户	
+		<div>
+			<div style="border:1px solid #CCC9C9;height:50px;width:80%;">
+				<form action="/delete_user" method="POST">
+					<div style="width:25%;float:left;margin-top:11px;margin-left:20px;">
+						<span>选择要删除的用户:</span><span>$:user_select</span>
+					</div>
+					<div style="width:20%;float:left;margin-top:11px;margin-left:20px;">
+						<span><input type="submit" value="提交"></span>
+					</div>	
+				</form>
+			</div>
+		</div>
+</div>
+
+

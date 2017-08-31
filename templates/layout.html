@@ -1,0 +1,43 @@
+$def with(content)
+<html>
+	<head>
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>user management</title>
+	</head>
+	<style>
+		a:link {
+			text-decoration:none;
+		}
+		a:visited {
+			text-decoration: none;  
+		}
+		a:hover {
+			text-decoration: none;
+		}
+		a:active {
+			text-decoration: none;
+		}
+	</style>
+	<body style="margin:0px;">
+		<div style="width:100%;height:45px;background: #000;">
+			<div style="margin-top: 0px;margin-bottom:0px;width:10%;float:left;">
+				<span style="padding-left: 20px">
+					<a href="/usermanager">
+					<span style="color: #FFF;font-size: 18px;text-align: left;font-weight: 300;line-height: 45px;">用户管理<span></a>
+				</span>	
+			</div>
+			<div style="margin-top: 0px;margin-bottom:0px;width:10%;float:left;">
+				<span style="padding-left: 20px">
+					<a href="http://180.153.64.131:5602/app/kibana">
+					<span style="color: #FFF;font-size: 18px;text-align: left;font-weight: 300;line-height: 45px;">返回Kibana<span></a>
+				</span>	
+			</div>
+		</div>	
+
+		<div style="margin-top:30px;">
+			$:content
+		</div>
+	</body>
+</html>
+
+

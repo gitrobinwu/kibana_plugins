@@ -1,0 +1,36 @@
+$def with(sg_select,message)
+<div style="margin-left:30px;">
+	<div style="width:20%;">
+		<span style="color:#f51515;text-align:left;font-size:20px;">
+			<h3>注册用户</h3>
+		</span>	
+	</div>
+	$# 如果消息非空则刷新刷新消息
+	$if message:
+		<div style="width:80%">
+			<div style="color: #F20C0C;font-size:15px;text-align:left;">
+				<p><span>提示:&nbsp&nbsp</span><span>$message</span></p>
+			</div>
+		</div>
+		
+	$if sg_select:	
+		$# 新建用户
+		<div>
+			<div style="border:1px solid #CCC9C9;height:50px;width:80%;">
+				<form action="/new_user" method="POST">
+					<div style="width:20%;float:left;margin-top:11px;margin-left:20px;">
+						<span>用户名:<span><span><input type="text" name="username"></span>
+					</div>
+					<div style="width:20%;float:left;margin-top:11px;margin-left:20px;">
+						<span>密码:</span><span><input type="password" name="password"></span>
+					</div>
+					<div style="width:21%;float:left;margin-top:11px;margin-left:20px;">
+						<span>选择角色:</span><span>$:sg_select</span>
+					</div>	
+					<div style="width:20%;float:left;margin-top:11px;margin-left:20px;">
+						<span><input type="submit" value="注册"></span>
+					</div>	
+				</form>
+			</div>	
+		</div>
+</div>
